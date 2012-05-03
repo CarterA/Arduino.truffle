@@ -1,0 +1,47 @@
+(root source.arduino
+
+  ## Basics
+
+  # Standard classes
+  (zone arduino.standard.support.class
+    (match
+      (regex [\b(EEPROM|Serial|EthernetServer|EthernetClient|EthernetUDP|Firmata|LiquidCrystal|SD|Servo|SPI|SoftwareSerial|Stepper|Wire)\b])
+    )
+  )
+
+  # Standard functions
+  (zone support.function.c.arduino
+    (match
+      (list abs acos asin atan atan2 ceil constrain cos degrees exp floor log map max min radians random randomSeed round sin sq sqrt tan bitRead bitWrite bitSet bitClear bit highByte lowByte analogReference analogRead analogWrite attachInterrupt detachInterrupt delay delayMicroseconds digitalWrite digitalRead interrupts millis micros noInterrupts noTone pinMode pulseIn shiftOut tone begin end read print println available flush setup loop)
+      (boundary.both)
+    )
+  )
+  
+  # Standard constants
+  (zone support.constant.c.arduino
+    (match
+      (regex [\b(HIGH|LOW|INPUT|OUTPUT|DEC|BIN|HEX|OCT|BYTE|PI|HALF_PI|TWO_PI|LSBFIRST|MSBFIRST|CHANGE|FALLING|RISING|DEFAULT|EXTERNAL|INTERNAL|INTERNAL1V1|INTERNAL2V56)\b])
+    )
+  )
+
+  ## Code completion markers
+
+  # Serial class
+  (zone serial.arduino.function.c
+    (match
+      (regex [Serial\d\.])
+    )
+  )
+
+  # Stream subclasses (Serial, Wire, etc.)
+  (zone stream.arduino.function.c
+    (match
+      (regex [(Serial|Wire|Ethernet|IPAddress|EthernetServer|EthernetClient|SD)\d])
+    )
+  )
+  
+  ## C takes care of everything else!
+  
+  (include source.c)
+
+)

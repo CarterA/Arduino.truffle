@@ -1,0 +1,19 @@
+(detector
+    (extension ino))
+
+(folding
+    (start [(\{\s*(//.*)?$|^\s*// \{\{\{|/\*\*)])
+    (stop [^\s*(\}|// \}\}\}$|\*\*/)]))
+
+(indentation.increase [^.*(\{[^}"']*|\([^)"']*)$])
+
+(shell-variables
+    (TM_COMMENT_START [// ])
+    (TM_COMMENT_START_2 [/* ])
+    (TM_COMMENT_END_2 [ */])
+    (TM_COMMENT_START_3 [/** ])
+    (TM_COMMENT_END_3 [ */]))
+
+(comment.line [// ])
+
+(comment.block [/* ] [ */])

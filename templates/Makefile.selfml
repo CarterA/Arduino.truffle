@@ -1,0 +1,15 @@
+(name Arduino Makefile)
+
+(group.platform Arduino)
+
+(group.principles Arduino)
+
+(file.primary
+    (name Makefile)
+    (filename Makefile)
+    (contents [BOARD_TAG = uno
+ARDUINO_PORT = /dev/cu.usb*
+ARDUINO_LIBS = 
+
+include "$(PWD)/Arduino-Makefile/arduino-mk/Arduino.mk"
+]))
