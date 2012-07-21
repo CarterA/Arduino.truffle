@@ -4,7 +4,7 @@ This "truffle" (plugin) for [Chocolat](http://chocolatapp.com/) adds an awesome 
 
 ### Requirements & Installation ###
 
-Download the repository as a zip file, unzip it, and rename the folder to *Arduino.truffle*. Move that folder to *~/Library/Application Support/Chocolat/Truffles*, and rester Chocolat if it was open.
+Download the repository as a zip file, unzip it, and rename the folder to *Arduino.truffle*. Move that folder to *~/Library/Application Support/Chocolat/Truffles*, and restart Chocolat if it was open.
 
 For the various actions to work, you need to have the Arduino IDE installed in your */Applications* folder. The truffle is currently dependent upon the tools contained in the IDE, but you don't need to keep the IDE open.
 
